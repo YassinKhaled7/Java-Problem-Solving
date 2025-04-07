@@ -1,35 +1,28 @@
 public class Book {
     private String title;
     private String author;
-    int isbn;
+    private int isbn;
 
-    public Book(String title, String name, int num) {
+    public Book(String title, String author, int isbn) {
         this.title = title;
-        this.author = name;
-        this.isbn = num;
+        this.author = author;
+        this.isbn = isbn;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public String getName() {
+    public String getAuthor() {
         return author;
     }
 
-    public int getisbn() {
+    public int getIsbn() {
         return isbn;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setName(String author) {
-        this.author = author;
-    }
-
-    public void setisbn(int isbn) {
-        this.isbn = isbn;
+    @Override
+    public String toString() {
+        return "Title: " + title + ", Author: " + author + ", ISBN: " + isbn;
     }
 }
